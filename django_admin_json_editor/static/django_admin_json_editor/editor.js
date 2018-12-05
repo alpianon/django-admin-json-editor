@@ -4,13 +4,8 @@ var enable_json_editor = function(element){
   var id = element.id
   if (id.indexOf('__prefix__') === -1) { // activate editor only if it is not an inline template row
     var textarea_id = "id_"+element.id.replace('_editor', '')
-    var schema = JSON.parse(element.getAttribute('data-schema'))
     var data = JSON.parse(element.getAttribute('data-data'))
-    var options = {
-        theme: "bootstrap3",
-        iconlib: "fontawesome4",
-        schema: schema,
-    };
+    var options = JSON.parse(element.getAttribute('data-options'))
     editor[id] = new JSONEditor(element, options);
     JSONEditor.plugins.sceditor.emoticonsEnabled = element.getAttribute("data-sceditor");
     editor[id].on('change', function () {
