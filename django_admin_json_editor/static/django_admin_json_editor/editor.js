@@ -1,5 +1,4 @@
 var editor = {}
-var $ = django.jQuery
 var enable_json_editor = function(element){
   var id = element.id
   if (id.indexOf('__prefix__') === -1) { // activate editor only if it is not an inline template row

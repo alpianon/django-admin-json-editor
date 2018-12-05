@@ -65,7 +65,7 @@ class JSONEditorWidget(forms.Widget):
             ]
         }
         js = [
-            'django_admin_json_editor/jquery/jquery.min.js',
+	        'django_admin_json_editor/jquery.init.js',
             'django_admin_json_editor/bootstrap/js/bootstrap.min.js',
             'django_admin_json_editor/jsoneditor/jsoneditor.min.js',
             'django_admin_json_editor/editor.js',
