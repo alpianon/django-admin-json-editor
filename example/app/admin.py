@@ -134,7 +134,14 @@ class OtherJSONModelAdmin(admin.ModelAdmin):
     inlines = [ RelatedJSONModelStackedInline, ]
     def get_form(self, request, obj=None, **kwargs):
         widgets = {
-            'data': JSONEditorWidget(OTHER_DATA_SCHEMA, collapsed=False),
+            'data': JSONEditorWidget(
+                    OTHER_DATA_SCHEMA, collapsed=False,
+                    editor_options = {
+                        'disable_collapse': True,
+                        'disable_edit_json': True,
+                        'disable_properties': True,
+                    }
+                ),
         }
         return super().get_form(request, obj, widgets=widgets, **kwargs)
 
