@@ -1,3 +1,3 @@
-var jQuery = django.jQuery
-var $ = django.jQuery
+var jQuery = django.jQuery;
+var $ = django.jQuery;
 
